@@ -4,7 +4,7 @@ library(WDI)
 
 # Import data
 death     = read.csv("/Users/dennisjonsson/Documents/1. Datavidenskab/1. Semester/Data Visualization/Data/cause_of_deaths.csv")
-total_pop = read.csv("/Users/dennisjonsson/Documents/1. Datavidenskab/1. Semester/Data Visualization/Data/population.csv")
+total_pop = read.csv("https://raw.githubusercontent.com/Denze8/Data-Visualization-Project/main/Data/population.csv?token=GHSAT0AAAAAACHXHC7NUXI5CZJQUGBPI52UZIIEGIQ")
 
 # Years in original data
 name = paste(unique(death$Year))
