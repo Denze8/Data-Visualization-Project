@@ -39,4 +39,5 @@ death[, 'Population']                  = total_pop$value
 death[, 'Gross Domestic Product(GDP)'] = GDP$NY.GDP.MKTP.KD
 
 # Save dataset
-write.csv(death, "/Users/dennisjonsson/Documents/1. Datavidenskab/1. Semester/Data Visualization/Data/real.csv")
+path = ""
+write.csv(death, path)
