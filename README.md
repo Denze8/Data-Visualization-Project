@@ -1,1 +1,2 @@
-# Data-Visualization-Project
+# Data Visualization Project
+Semester project
