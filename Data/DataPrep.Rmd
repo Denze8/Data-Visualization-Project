@@ -1,0 +1,36 @@
+---
+title: "Data Preparation"
+author: "DJ"
+date: "2023-09-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Libraries
+
+```{r}
+# Data formating
+library(data.table)
+library(tidyverse)
+
+# API to World Bank 
+library(WDI) # https://github.com/vincentarelbundock/WDI
+```
+
+# Import datasets
+
+```{r}
+# https://www.kaggle.com/datasets/ivanchvez/causes-of-death-our-world-in-data
+death     = read.csv("https://raw.githubusercontent.com/Denze8/Data-Visualization-Project/main/Data/cause_of_deaths.csv?token=GHSAT0AAAAAACHXHC7NOSJWTRNS4IFMBACOZIIEG7A")
+
+# https://data.worldbank.org/indicator/SP.POP.TOTL
+total_pop = read.csv("https://raw.githubusercontent.com/Denze8/Data-Visualization-Project/main/Data/population.csv?token=GHSAT0AAAAAACHXHC7NUXI5CZJQUGBPI52UZIIEGIQ")
+
+# Download GDP data
+countries = unique(death$)
+GDP       = WDI(indicator = 'NY.GDP.MKTP.KD', country = countries, start=1990, end=2019)
+```
+
