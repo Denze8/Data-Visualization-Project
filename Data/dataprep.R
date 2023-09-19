@@ -50,7 +50,7 @@ total_pop = melt(setDT(total_pop), id.vars = c("Country.Name", "Country.Code"),
 
 # Download GDP data
 countries = unique(total_pop$Country.Code)
-GDP       = WDI(indicator = 'NY.GDP.MKTP.KD', country= countries, start=1990, end=2019)
+GDP       = WDI(indicator = 'NY.GDP.MKTP.KD', country = countries, start=1990, end=2019)
 
 # Set to same order
 death     = death     %>% arrange(Code, Year)
@@ -62,5 +62,6 @@ death[, 'Population']                  = total_pop$value
 death[, 'Gross Domestic Product(GDP)'] = GDP$NY.GDP.MKTP.KD
 
 # Save dataset
-write.csv(death, "/Users/dennisjonsson/Data-Visualization-Project/Data/Full Dataset")
+#write.csv(death, "/Users/dennisjonsson/Data-Visualization-Project/Data/Full Dataset")
 
+dim(death)
